@@ -1,6 +1,6 @@
 # Microgrid simulation with ScadaBR and Modbus TCP
 
-This project aims to provide the necessary files for simulating a complete microgrid industrial environment, including a SCADA server (SCADABR), a microgrid simulation with Simulink, and a Modbus server.
+This project aims to provide the necessary files for simulating a complete microgrid industrial environment, including a SCADA server (SCADABR), a microgrid simulation with Simulink, and a Modbus server. This project was carried out as part of the INF6103 "Cybersecurity of critical infrastructure" course given at Polytechnique Montréal.
 
 ## Project Contents
 
