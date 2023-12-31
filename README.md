@@ -29,3 +29,17 @@ For a complete simulation environment, you will need three different virtual mac
 ```bash
 git clone https://github.com/abonnivard/Microgrid-simulation-for-security-test.git
 cd Microgrid-simulation-for-security-test
+```
+2. Follow the instructions in `/modbus-server` to configure and run the Modbus server.
+3. Follow the instructions in `/scadabr` to configure and run the SCADABR server.
+4. Execute `tcp_server.py` in your host.
+5. Open the simulink file in your matlab and execute the simulation with the matlab file `tcp_client.m`.
+
+
+## Authors
+
+Adrien Bonnivard <br>
+Joel René Somo <br>
+Mohamed Sakandé <br>
+Yerima Kapi <br>
+
