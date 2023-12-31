@@ -6,9 +6,9 @@ This project aims to provide the necessary files for simulating a complete micro
 
 The project is organized as follows:
 
-- **/scadabr-server**: Contains the files necessary to configure and run the SCADA server (SCADABR). Refer to the README inside this directory for detailed instructions on configuration.
+- **/scadabr**: Contains the files necessary to configure and run the SCADA server (SCADABR). Refer to the README inside this directory for detailed instructions on configuration.
 
-- **/simulink-microgrid**: Includes Simulink files needed to simulate a microgrid. Explore the directory to find examples of configurations and usage. You have to open this repository inside your matlab. Execute the simulation directly with the tcp_client.m script.
+- **/simulink**: Includes Simulink files needed to simulate a microgrid. Explore the directory to find examples of configurations and usage. You have to open this repository inside your matlab. Execute the simulation directly with the tcp_client.m script.
 
 - **/modbus-server**: Contains files to set up a Modbus server. The README in this directory will guide you through the configuration and execution.
 
@@ -27,5 +27,5 @@ For a complete simulation environment, you will need three different virtual mac
 1. Clone this repository to your local machine.
 
 ```bash
-git clone https://github.com/your-username/industrial-simulation.git
-cd industrial-simulation
+git clone https://github.com/abonnivard/Microgrid-simulation-for-security-test.git
+cd Microgrid-simulation-for-security-test
