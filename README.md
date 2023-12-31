@@ -16,7 +16,7 @@ The project is organized as follows:
 
 For a complete simulation environment, you will need three different virtual machines:
 
-1. **SCADABR Server VM:** Set up a virtual machine to host the SCADABR server. Follow the instructions in `/scadabr-server` for configuration details.
+1. **SCADABR Server VM:** Set up a virtual machine to host the SCADABR server. Follow the instructions in `/scadabr` for configuration details.
 
 2. **Modbus Server VM:** Create another virtual machine dedicated to the Modbus server. Refer to the documentation in `/modbus-server` for setup instructions.
 
