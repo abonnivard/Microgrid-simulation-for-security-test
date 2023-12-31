@@ -14,16 +14,18 @@ set_param('MICRO_GRID_INF6103','SimulationCommand','start');
 t = tcpclient('127.0.0.1',9999);
 all_data = [];
 while(1)
-    pause(2);
+    pause(1);
     % TCP sending
-    u1 = out.tension1.data(1)
-    u2 = out.intensite1.data(1)
+    set_param('MICRO_GRID_INF6103','SimulationCommand','pause');
+    set_param('MICRO_GRID_INF6103','SimulationCommand','continue');
+    u1 = out.tension1.data(end,:);
+    u2 = out.intensite1.data(end,:);
     u3 = cmdk1;
 	u4 = cmdk2;
 	u5 = cmdk3;
     v = [u3,u4,u5,u1,u2];
     write(t,v);
-
+    
     % TCP receiving
     while(1) % loop, until getting some data
         nBytes = get(t,'BytesAvailable');
@@ -37,8 +39,6 @@ while(1)
     if isempty(data)
         data = [0,0,0,0,0];
     end
-    tension1 = data(4);
-    intensite1 = data(5);
     cmdk1 = data(1);
     cmdk2 = data(2); % separate each data in the matrix
 	cmdk3 = data(3);
@@ -47,9 +47,10 @@ while(1)
     set_param('MICRO_GRID_INF6103/var1', 'Value', num2str(cmdk1));
     set_param('MICRO_GRID_INF6103/var2', 'Value', num2str(cmdk2));
     set_param('MICRO_GRID_INF6103/var3', 'Value', num2str(cmdk3));
-    set_param('MICRO_GRID_INF6103', 'SimulationCommand', 'step');
     set_param('MICRO_GRID_INF6103','SimulationCommand','update');
+    set_param('MICRO_GRID_INF6103','SimulationCommand','step');
 
-
+    
 end
 
+    
